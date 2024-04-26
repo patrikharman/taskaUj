@@ -1,12 +1,12 @@
 import { TASKALISTA } from "./termekek.js";
 import { termekOsszeallit } from "./termekMegjelenit.js";
-import { nevRendez, arRendez } from "./rendezes.js"; 
+import { nevRendez, arRendez,torol } from "./rendezes.js"; 
 import { tablaOsszeallit,megjelenit } from "./fuggvenyek.js";
 const termekElem = $("#termekek");
 termekElem.html(termekOsszeallit(TASKALISTA));
-
+const KOSAR = []
 const kosarba = $("#gomb")
-kosarba.html(tablaOsszeallit(TASKALISTA))
+
 
 const divELEM = $("#termekek")
 divELEM.html(megjelenit(TASKALISTA))
@@ -17,6 +17,8 @@ init(TASKALISTA);
 function init(lista) {
     rendezEsemeny(lista);
     kosarEsemeny(lista);
+    torolEsemeny()
+    
 }
 
 function rendezEsemeny(lista) {
@@ -39,8 +41,19 @@ function rendezEsemeny(lista) {
 
 
 function kosarEsemeny() {
-    const gombElem = $("gomb")
+    const gombElem = $(".gomb")
     gombElem.on("click",function (event) {
         const ID = event.target.id 
+        KOSAR.push(TASKALISTA[ID])
+        kosarba.html(tablaOsszeallit(KOSAR))
     })
+}
+
+function torolEsemeny(){
+    const torolGomb=$(".torol")
+    torolGomb.on("click",function(event){
+    let id = event.target.id;
+    const LISTA = torol(TASKALISTA,id);
+    init(LISTA);
+});
 }

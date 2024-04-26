@@ -22,3 +22,7 @@ export function arRendez(lista, irany) {
     return lista;
 }
 
+export function torol(lista,id){
+    lista.splice(id,1);
+    return lista;
+}

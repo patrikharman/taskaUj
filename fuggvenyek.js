@@ -11,7 +11,7 @@ kiir(TASKALISTA);
 
 export function tablaOsszeallit(lista) {
     let txt="<table class='table table-striped'>"
-    txt+="<thead><tr><th>Kép</th><th>Termék</th><th>Ár</th>Termékeink<th></th></tr>"
+    txt+="<thead><tr><th>Kép</th><th>Termék</th><th>Ár</th>Kosaram<th></th></tr>"
     txt+="<tbody>"
     lista.forEach((elem,index) => {
         txt+=`<tr>`
