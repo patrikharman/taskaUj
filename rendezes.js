@@ -21,3 +21,4 @@ export function arRendez(lista, irany) {
     });
     return lista;
 }
+

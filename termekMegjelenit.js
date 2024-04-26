@@ -8,17 +8,20 @@ export function termekOsszeallit(lista) {
         txt += `<div id="termekek" class="text-center">`;
         txt += `<img src="${lista[index].kep}" alt="${lista[index].termek}" style="width: 100%; height: auto;">`;
         txt += `<p>${lista[index].ar}</p>`
-        txt += `<div><button id="${index}">Kosárba</button></div>`;
+        txt += `<div><button class="gomb" id="${index}">Kosárba</button></div>`;
         txt += `</div>`;
         txt += `</div>`;
     }
     txt += `</div>`;
     txt += `</div>`;
+
+    
     return txt;
 }
 
 export function megjelenit(txt) {
-    const divELEM = $(".adatok")
+    const divELEM = $(".termekek")
     divELEM.html(txt)
 }
+
 
