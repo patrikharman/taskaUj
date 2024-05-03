@@ -43,17 +43,19 @@ function rendezEsemeny(lista) {
 function kosarEsemeny() {
     const gombElem = $(".gomb")
     gombElem.on("click",function (event) {
-        const ID = event.target.id 
-        KOSAR.push(TASKALISTA[ID])
-        kosarba.html(tablaOsszeallit(KOSAR))
-    })
+    const ID = event.target.id 
+    KOSAR.push(TASKALISTA[ID])
+    kosarba.html(tablaOsszeallit(KOSAR))
+    torolEsemeny();
+});
 }
 
 function torolEsemeny(){
     const torolGomb=$(".torol")
     torolGomb.on("click",function(event){
     let id = event.target.id;
-    const LISTA = torol(TASKALISTA,id);
-    init(LISTA);
+    const LISTA = torol(KOSAR,id);
+    kosarba.html(tablaOsszeallit(KOSAR))
+    torolEsemeny();
 });
 }

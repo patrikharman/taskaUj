@@ -13,7 +13,7 @@ export function tablaOsszeallit(lista) {
     let txt="<table class='table table-striped'>"
     txt+="<thead><tr><th>Kép</th><th>Termék</th><th>Ár</th>Kosaram<th></th></tr>"
     txt+="<tbody>"
-    lista.forEach((elem,index) => {
+    lista.forEach((elem,index) => { 
         txt+=`<tr>`
         for (const kulcs in elem) {
             txt += `<td>${elem[kulcs]}</td>`;
