@@ -1,6 +1,9 @@
 termekek.js: JavaScript modul, ami a termékek adatait tartalmazza.
+
 termekMegjelenit.js: JavaScript modul, ami a termékek megjelenítéséért felelős.
+
 rendezes.js`: JavaScript modul, ami a termékek rendezését végzi.
+
 fuggvenyek.js: JavaScript modul, ami különböző függvényeket tartalmaz a webalkalmazás számára.
 
 
@@ -8,7 +11,6 @@ fuggvenyek.js: JavaScript modul, ami különböző függvényeket tartalmaz a we
 Ez a függvény kiírja a kapott lista elemeit a konzolra.
 
 tablaOsszeallit(lista)
-
 Ez a függvény egy HTML táblázatot generál a kapott lista alapján, amelyben megjeleníti a termékek adatait, valamint lehetőséget biztosít a termékek törlésére a kosárból.
 
 nevRendez(lista, irany)
