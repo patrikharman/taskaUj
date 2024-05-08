@@ -26,3 +26,10 @@ export function torol(lista,id){
     lista.splice(id,1);
     return lista;
 }
+
+export function szures(lista,keresoszoveg){
+    const szurtLista=lista.filter(function(taska){
+        return taska.termek.toUpperCase().includes(keresoszoveg.toUpperCase());
+    });
+    return szurtLista;
+}

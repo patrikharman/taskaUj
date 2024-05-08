@@ -24,6 +24,7 @@ export function tablaOsszeallit(lista) {
     txt+="</tbody></table>";
     return txt;
 }
+
 export function megjelenit() {
     
 }
