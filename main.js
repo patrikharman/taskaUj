@@ -9,10 +9,10 @@ const kosarba = $("#gomb")
 
 
 const divELEM = $("#termekek")
-divELEM.html(megjelenit(TASKALISTA))
+
 
 let irany = 1;
-init(TASKALISTA);
+init(TASKALISTA)
 
 szuresEsemeny();
 
@@ -68,8 +68,7 @@ function szuresEsemeny(){
         console.log(keresoszoveg)
         const szLista= szures(TASKALISTA,keresoszoveg)
         console.log(szLista)
-        divELEM.html(megjelenit(szLista))
-        console.log(divELEM.html(megjelenit(szLista)))
+        termekElem.html(termekOsszeallit(szLista));
     });
 }
 
